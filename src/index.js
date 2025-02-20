@@ -20,10 +20,16 @@ app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'view', 'login.html'));
 });
 
-// Nueva ruta para manejar la solicitud a /api/servicio
+// Nueva ruta para manejar la solicitud GET a /api/servicio
+app.get('/api/servicio', (req, res) => {
+  // Servir el archivo servicio.html
+  res.sendFile(path.join(__dirname, 'view', 'servicio.html'));
+});
+
+// Nueva ruta para manejar la solicitud POST a /api/servicio
 app.post('/api/servicio', (req, res) => {
-  // Responder con el mensaje "servicios unach"
-  res.json({ success: true, message: 'servicios unach' });
+  // Servir el archivo servicio.html
+  res.sendFile(path.join(__dirname, 'view', 'servicio.html'));
 });
 
 app.listen(3000, () => {
